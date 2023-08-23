@@ -5,7 +5,7 @@ import logo from '../../assets/images/logo.svg'
 function Header() {
   return (
     <header className="header">
-      <img src={logo}/>
+      <img src={logo} alt='logo'/>
       <h1>GitHub Repository Downloader</h1>
     </header>
   );
