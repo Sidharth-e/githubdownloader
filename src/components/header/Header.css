@@ -1,0 +1,24 @@
+.header {
+    background-color: #24292e;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .header img{
+    width: 5rem;
+  }
+  .header h1 {
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 0;
+  }
+  /* @media only screen and (max-width: 600px) {
+    .header img{
+      width: 20%;
+    }
+  } */

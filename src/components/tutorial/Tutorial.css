@@ -1,0 +1,71 @@
+.tutorial {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .tutorial h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .tutorial p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .tutorial ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .tutorial li {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Additional styling can be added as needed */
+  .projects-grid {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 35px;
+  }
+  
+  .card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+  }
+  
+  .gif {
+    width: 100%;
+    height: 56px; /* Adjust the height as needed */
+    object-fit: cover;
+  }
+    
+  .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    gap: 20px;
+  }
+  
+  .info {
+    padding: 10px;
+    color: #333;
+  }
+
+  
+  /* Add more styles as needed */
+  
