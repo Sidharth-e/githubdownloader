@@ -114,7 +114,7 @@ function App() {
           onChange={handleGithubUrlChange}
           placeholder="Enter a GitHub repository URL"
         />
-        <FaPaste size={20} style={{ marginRight: 5 }} onClick={handlePaste} />
+        <FaPaste className="paste" size={20}  style={{ marginRight: 10 }} onClick={handlePaste} />
         <button onClick={handleDownload}>Download</button>
       </div>
     </div>
