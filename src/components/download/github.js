@@ -13,6 +13,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [commits, setCommits] = useState([]);
   const inputRef = useRef(null); // Create a ref for the input element
+  const branchInputRef = useRef(null); // Add a ref for the branch input
 
   const handleGithubUrlChange = (event) => {
     setGithubUrl(event.target.value);
@@ -28,7 +29,7 @@ function App() {
       setLoading(true);
       const repoName = extractRepoName(githubUrl);
       const apiUrl = `https://api.github.com/repos/${repoName}`;
-
+      const branchName = branchInputRef.current.value || "main";
       fetch(apiUrl)
         .then((response) => {
           if (!response.ok) {
@@ -42,7 +43,7 @@ function App() {
         .then((data) => {
           console.log(data);
           setRepoInfo(data);
-          const zipDownloadLink = `https://github.com/${repoName}/archive/refs/heads/main.zip`;
+          const zipDownloadLink = `https://github.com/${repoName}/archive/refs/heads/${branchName}.zip`;
           setDownloadLink(zipDownloadLink);
           fetch(`https://api.github.com/repos/${repoName}/commits`)
             .then((response) => response.json())
@@ -112,8 +113,16 @@ function App() {
           ref={inputRef}
           value={githubUrl}
           onChange={handleGithubUrlChange}
-          placeholder="Enter a GitHub repository URL"
+          placeholder="GitHub repo URL"
         />
+        <div className="line">
+
+        </div>
+        <input
+    type="text"
+    placeholder="Branch Name (default: main)"
+    ref={branchInputRef} // Add a ref for the branch input
+  />
         <FaPaste className="paste" size={20}  style={{ marginRight: 10 }} onClick={handlePaste} />
         <button onClick={handleDownload}>Download</button>
       </div>
